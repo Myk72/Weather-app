@@ -13,7 +13,7 @@ const OtherCountry: React.FC<Props> = ({ city }) => {
       <div className="font-serif font-semibold">Other Cities</div>
       <div className="flex flex-wrap justify-center py-2 w-[310px] gap-3">
         {otherCities.map((c, index) => (
-          <CountryPage key={index} city={c.name} />
+          <CountryPage key={index} city={c.name}/>
         ))}
       </div>
     </div>

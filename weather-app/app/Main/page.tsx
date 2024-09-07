@@ -25,6 +25,11 @@ const MainPage = () => {
 
   const fetchForecast = async () => {
     const data: WeatherResponse = await fetchWeather("forecast", location);
+    if (!data) {
+      alert("Location not found");
+      setLocation("London");
+      return;
+    }
     setForecastWeatherData(data);
     console.log("Forecast", data);
   };
