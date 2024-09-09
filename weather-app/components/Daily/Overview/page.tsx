@@ -29,8 +29,8 @@ const DailyOverview: React.FC<Props> = ({
           <div className="flex items-center">
             <MapPin className="size-6" />
           </div>
-          <div className="text-lg w-full">
-            {city} {country}
+          <div className="flex text-lg whitespace-nowrap">
+            {city}, {country}
           </div>
         </div>
         <div>
@@ -40,20 +40,22 @@ const DailyOverview: React.FC<Props> = ({
         </div>
         <div className="flex flex-col gap-2">
           <div className="text-4xl">{temp.toFixed()} &deg;c</div>
-          <div className="text-xs font-semibold flex flex-row gap-2">
+          <div className="text-[10px] font-semibold flex flex-row gap-2">
             <div>High: {high.toFixed()}&deg;C</div>
             <div>Low: {low.toFixed()}&deg;C</div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className=" flex flex-col gap-1 ">
         <div className="flex flex-col">
-          <img
-            src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
-            alt="Weather Icon"
-          />
+          <div className="flex justify-center size-44">
+            <img
+              src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
+              alt="Weather Icon"
+            />
+          </div>
 
-          <div className="flex justify-end  font-semibold  text-xl ">
+          <div className="flex justify-end font-semibold text-xl text-end ">
             {description}
           </div>
         </div>
